@@ -14,9 +14,9 @@ Express + TypeScript auth API using Drizzle ORM, Postgres, and HTTP-only session
 - POST `/auth/register` — body: `{ email, username, password }`
 - POST `/auth/login` — body: `{ email, password }` — sets `session_token` cookie
 - POST `/auth/logout` — clears cookie and deletes session
-- GET `/profile/profile` — requires session, returns current user
-- PUT `/profile/profile` — body: `{ email?, username?, password? }` (validated)
-- DELETE `/profile/profile` — deletes user and clears session
+- GET `/profile/me` — requires session, returns current user
+- PUT `/profile/me` — body: `{ email?, username?, password? }` (validated)
+- DELETE `/profile/me` — deletes user and clears session
 
 ## Project layout
 
